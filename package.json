@@ -1,0 +1,16 @@
+{
+  "name": "lexy",
+  "version": "1.0.0",
+  "description": "My lecture my leaning",
+  "main": "index.js",
+  "repository": "https://github.com/butternoei008",
+  "author": "Noei",
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.7.1"
+  },
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
+  }
+}

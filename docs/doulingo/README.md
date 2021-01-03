@@ -1,4 +1,4 @@
-# Doulingo Leaning
+# Duolingo Leaning
 lorem askl;djf
 
 # Adjective

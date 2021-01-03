@@ -5,14 +5,18 @@ module.exports = {
       sidebar: {
          "/": [
             {
-               title: "Lexy",
+               title: "📓 Lexy",
                collapsable: false,
                children: ["/"]
             },
             {
-               title: "Doulingo",
+               title: "🐳 Docker",
+               collapsable: false
+            },
+            {
+               title: "🔶 Duolingo",
                collapsable: false,
-               children: ["", "doulingo/adjective.md", "doulingo/place.md"]
+               children: ["duolingo/", "duolingo/adjective.md", "duolingo/place.md"]
             }
          ]
       }

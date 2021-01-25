@@ -1,4 +1,4 @@
-## Adjective
+# Adjective
 
 | Verb           | Translate               |
 | -------------- | ------------------------|

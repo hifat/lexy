@@ -1,11 +1,11 @@
 module.exports = {
-   title: "Lexy",
+   title: "Lecy",
    description: "Just playing around",
    themeConfig: {
       sidebar: {
          "/": [
             {
-               title: "📓 Lexy",
+               title: "📓 Lecy",
                collapsable: false,
                children: ["/"]
             },
@@ -16,7 +16,27 @@ module.exports = {
             {
                title: "🔶 Duolingo",
                collapsable: false,
-               children: ["duolingo/", "duolingo/adjective.md", "duolingo/place.md"]
+               children: [
+                  "duolingo/",
+                  "duolingo/practice.md",
+                  "duolingo/adjective.md",
+                  "duolingo/place.md",
+                  "duolingo/people.md"
+               ]
+            },
+            {
+               title: "~ Libra",
+               collapsable: false
+            },
+            {
+               title: "🎭 HCI",
+               collapsable: false,
+               children: ["HCI/"]
+            },
+            {
+               title: "ML",
+               collapsable: false,
+               children: ["ML/"]
             }
          ]
       }

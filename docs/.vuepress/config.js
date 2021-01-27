@@ -37,6 +37,11 @@ module.exports = {
                title: "ML",
                collapsable: false,
                children: ["ML/"]
+            },
+            {
+               title: "🔀 Git",
+               collapsable: false,
+               children: ["git/"]
             }
          ]
       }

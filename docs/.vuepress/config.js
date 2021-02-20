@@ -21,7 +21,8 @@ module.exports = {
                   "duolingo/practice.md",
                   "duolingo/adjective.md",
                   "duolingo/place.md",
-                  "duolingo/people.md"
+                  "duolingo/people.md",
+                  "duolingo/determiners.md"
                ]
             },
             {
@@ -34,7 +35,7 @@ module.exports = {
                children: ["HCI/"]
             },
             {
-               title: "ML",
+               title: "⚙️ ML",
                collapsable: false,
                children: ["ML/"]
             },

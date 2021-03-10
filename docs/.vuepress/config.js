@@ -43,6 +43,11 @@ module.exports = {
                title: "🔀 Git",
                collapsable: false,
                children: ["git/"]
+            },
+            {
+               title: "🗺️ GPS",
+               collapsable: false,
+               children: ["GPS/"]
             }
          ]
       }

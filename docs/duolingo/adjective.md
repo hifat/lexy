@@ -11,7 +11,8 @@
 | Exactly(อุทาน)  | พอดี, ใช่แล้ว, นั่นสิ, นั่นน่ะสิ |
 | Especially     | โดยเฉพาะ                 |
 | Generally      | โดยทั่วไป                 |
-| Perfectly      | ไร้ที่ติ                    |
+| Perfectly      | สมบูรณ์แบบ               |
+| flawlessly     | ไร้ที่ติ                    |
 | Finally        | ท้ายที่สุด                  |
 | Usually        | ปกติ                     |
 | Possibly       | อาจจะ                    |

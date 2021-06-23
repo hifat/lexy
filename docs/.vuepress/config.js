@@ -51,6 +51,11 @@ module.exports = {
                title: "🗺️ GPS",
                collapsable: false,
                children: ["GPS/"]
+            },
+            {
+               title: "🗺️ Windows command",
+               collapsable: false,
+               children: ["WindowsCMD/"]
             }
          ]
       }

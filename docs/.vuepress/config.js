@@ -56,7 +56,12 @@ module.exports = {
                title: "🗺️ Windows command",
                collapsable: false,
                children: ["WindowsCMD/"]
-            }
+            },
+            {
+               title: "🦉 Ubuntu",
+               collapsable: false,
+               children: ["Ubuntu/"]
+            },
          ]
       }
    }

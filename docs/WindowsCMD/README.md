@@ -1,5 +1,10 @@
 # Powershell
 
+- Make File
+```
+ cd . > filenaem.extension
+```
+
 - ใช้ CMD Prompt ใน Powshell
 ```
    cmd /c <คำสั่ง>

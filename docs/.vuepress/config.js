@@ -22,7 +22,8 @@ module.exports = {
                   "duolingo/adjective.md",
                   "duolingo/place.md",
                   "duolingo/people.md",
-                  "duolingo/determiners.md"
+                  "duolingo/determiners.md",
+                  "duolingo/education.md",
                ]
             },
             {

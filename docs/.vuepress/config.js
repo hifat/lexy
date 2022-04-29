@@ -24,6 +24,7 @@ module.exports = {
                   "duolingo/people.md",
                   "duolingo/determiners.md",
                   "duolingo/education.md",
+                  "duolingo/verb.md",
                ]
             },
             {

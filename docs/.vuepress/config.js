@@ -15,7 +15,7 @@ module.exports = {
             },
             {
                title: "🔶 Duolingo",
-               collapsable: false,
+               collapsable: true,
                children: [
                   "duolingo/",
                   "duolingo/practice.md",
@@ -25,6 +25,8 @@ module.exports = {
                   "duolingo/determiners.md",
                   "duolingo/education.md",
                   "duolingo/verb.md",
+                  "duolingo/infinitive.md",
+                  "duolingo/adjective_3.md",
                ]
             },
             {

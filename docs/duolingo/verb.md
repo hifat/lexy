@@ -61,4 +61,4 @@
 | answered   | ได้ตอบ                  |
 | fell       | ได้ตก                   |
 | talked     | ได้คุย                  |
-| stayed     | ได้อยู่                  |
+| stayed     | ได้อยู่                 |

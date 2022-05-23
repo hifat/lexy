@@ -1,0 +1,37 @@
+# Adjective 3
+
+| Verb         | Translate                   |
+| ------------ | --------------------------- |
+| Bilingual    | พูดได้สองภาษา               |
+| Local        | ท้องถิ่น                    |
+| Professional | มืออาชีพ                    |
+| Living       | มีชีวิตอยู่/อาศัยอยู่       |
+| Popular      | เป็นที่นิยม                 |
+| Legal        | ถูกต้องตามกฎหมาย            |
+| Minimum      | น้อยที่สุด                  |
+| Whole        | ทั้งหมด/ทั้ง...             |
+| Independent  | อิสระ                       |
+| Military     | ทหาร                        |
+| Soldiers     | ทหาร                        |
+| Necessary    | อย่างจำเป็น                 |
+| Modern       | ทันสมัย                     |
+| Responsible  | รับผิดชอบ                   |
+| Alive        | มีชีวิต                     |
+| Efficient    | มีประสิทธิภาพ               |
+| Historical   | ประวัติการ/อิงประวัติศาสตร์ |
+| Famous       | มีชื่อเสียง                 |
+| Serious      | จริงจัง                     |
+| traditional  | ดั้งเดิม                    |
+| seemed       | ดูเหมือน                    |
+| familiar     | คุ้นเคย                     |
+| cultural     | ทางวัฒนธรรม                 |
+| afraid       | กลัว                        |
+| convenient   | สะดวก                       |
+| able         | สามารถ                      |
+| sharp        | คม                          |
+| interesting  | น่าสนใจ                     |
+| deep         | ลึก                         |
+| religious    | เคร่งศาสนา                  |
+| wooden       | ที่ทำด้วยไม้                |
+| frequent     | บ่อย                        |
+| rather       | ค่อนข้าง                    |

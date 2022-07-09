@@ -14,6 +14,11 @@ module.exports = {
                collapsable: false
             },
             {
+               title: "📮 Type Script",
+               collapsable: false,
+               children: ["typeScript/"],
+            },
+            {
                title: "🔶 Duolingo",
                collapsable: true,
                children: [
@@ -28,10 +33,6 @@ module.exports = {
                   "duolingo/infinitive.md",
                   "duolingo/adjective_3.md",
                ]
-            },
-            {
-               title: "~ Libra",
-               collapsable: false
             },
             {
                title: "🎭 HCI",

@@ -6,12 +6,12 @@
 | passwd       |	change password   |
 
 #### Delete user
-```{shell}
+```shell
 userdel -r <username>
 ```
 
 #### Change IP
-```{shell}
+```shell
 sudo su
 
 cd /etc/netplans
@@ -19,7 +19,7 @@ nano <your file>
 ```
 - Fix fllow your own config
 
-```{shell}
+```shell
 # Example
 
 network:
@@ -32,7 +32,7 @@ network:
             addresses: [192.168.20.2, 8.8.8.8]
 ```
 
-```{shell}
+```shell
 netplan apply
 ```
 
@@ -47,7 +47,7 @@ netplan apply
 - /etc = Configuration file
 - /mnt = Mount point
 
-```{shell}
+```shell
 usermod -d /home/<username> <username>
 usermod -s /bin/bash <username>
 usermod -g <groupname> <username>
@@ -68,6 +68,6 @@ d = directory, - = file, l = symlink
 
 #### Change permission
 4 = read, 2 = write, 1 = execute
-```{shell}
+```shell
 chmod 777 <filename>    # <filename> can read write and execute
 ```

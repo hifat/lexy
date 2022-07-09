@@ -422,6 +422,13 @@ const user: object = {
 ```
 
 ## Tuples
+### Explicitly
 ```ts
 let tup: [string, string, number] = ["butter", "cheese", 98]
+```
+
+### Implicitly
+Readonly
+```ts
+const tup = ["butter", "cheese", 98] as const
 ```

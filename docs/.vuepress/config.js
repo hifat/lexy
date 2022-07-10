@@ -16,7 +16,10 @@ module.exports = {
             {
                title: "📮 Type Script",
                collapsable: false,
-               children: ["typeScript/"],
+               children: [
+                  "typeScript/",
+                  "typeScript/JSDocs.md"
+               ],
             },
             {
                title: "🔶 Duolingo",

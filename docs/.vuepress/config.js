@@ -11,7 +11,14 @@ module.exports = {
             },
             {
                title: "🐳 Docker",
-               collapsable: false
+               collapsable: false,
+               children: [
+                  "docker/",
+                  "docker/integrate.md",
+                  "docker/docker-compose.md",
+                  "docker/kubernetes.md",
+                  "docker/best-practices.md",
+               ]
             },
             {
                title: "📮 Type Script",
@@ -69,6 +76,11 @@ module.exports = {
                title: "🦉 Ubuntu",
                collapsable: false,
                children: ["Ubuntu/"]
+            },
+            {
+               title: "Other",
+               collapsable: false,
+               children: ["other/"]
             },
          ]
       }

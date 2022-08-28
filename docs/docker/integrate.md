@@ -119,4 +119,4 @@ docker logs <CONTAINER_NAME | ID>
 ```
 
 ### Choose image type
-![choose_image_type](./choose_image_type.webp)
+![choose_image_type](./assets/image/choose_image_type.jpg)

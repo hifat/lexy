@@ -8,3 +8,6 @@
    mingw-get install mingw32-make
    ```
 4. in "C:\MinGW\bin" rename mingw32-make.exe to "make.exe"
+
+## Laravel apache
+[See this link](https://phpraxis.wordpress.com/2016/08/02/steps-for-configuring-laravel-on-apache-http-server/)

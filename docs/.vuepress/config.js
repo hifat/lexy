@@ -15,6 +15,7 @@ module.exports = {
                children: [
                   "docker/",
                   "docker/integrate.md",
+                  "docker/docker-file.md",
                   "docker/docker-compose.md",
                   "docker/kubernetes.md",
                   "docker/best-practices.md",

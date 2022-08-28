@@ -47,3 +47,11 @@ docker stack rm kubeops-stack
 ```docker
 kubectl delete servics -l "com.docker.service.id in (kubeops-stack-kubeops-mysql,kubeops-stack-spring,com)"
 ```
+=================================
+
+# Trip
+
+## See modules in image PHP
+```docker
+docker run php:8.0.3-fpm-buster php -m    # php -m : This is command for php only
+```

@@ -53,7 +53,12 @@ docker-compose up
 docker-compose up -d
 ```
 
-## Kill all process
+## Stop all services
+```docker
+docker-compose stop
+```
+
+## Remove and stop all image in compose
 ```docker
 docker-compose down
 ```

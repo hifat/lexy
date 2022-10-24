@@ -6,12 +6,10 @@ module.exports = {
          "/": [
             {
                title: "📓 Lecy",
-               collapsable: false,
                children: ["/"]
             },
             {
                title: "🐳 Docker",
-               collapsable: false,
                children: [
                   "docker/",
                   "docker/integrate.md",
@@ -23,7 +21,6 @@ module.exports = {
             },
             {
                title: "📮 Type Script",
-               collapsable: false,
                children: [
                   "typeScript/",
                   "typeScript/JSDocs.md"
@@ -47,12 +44,10 @@ module.exports = {
             },
             {
                title: "🎭 HCI",
-               collapsable: false,
                children: ["HCI/"]
             },
             {
                title: "⚙️ ML",
-               collapsable: false,
                children: [
                   "ML/",
                   "ML/test.md",
@@ -60,27 +55,26 @@ module.exports = {
             },
             {
                title: "🔀 Git",
-               collapsable: false,
                children: ["git/"]
             },
             {
                title: "🗺️ GPS",
-               collapsable: false,
                children: ["GPS/"]
             },
             {
                title: "🗺️ Windows command",
-               collapsable: false,
                children: ["WindowsCMD/"]
             },
             {
                title: "🦉 Ubuntu",
-               collapsable: false,
                children: ["Ubuntu/"]
             },
             {
+               title: "💸 Financial",
+               children: ["financial/money101.md"]
+            },
+            {
                title: "Other",
-               collapsable: false,
                children: ["other/"]
             },
          ]

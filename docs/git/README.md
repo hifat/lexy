@@ -9,12 +9,16 @@
 
 - อยากเปลี่ยน branch แต่ยังไม่อยาก commit
 ```bash
-   git stash push --include-extrash -m "message"
+   git stash push --include-untracked -m "message"
 
    # ถ้าอยากเอาอันล่าสุดที่ stash มาใช้
    git stash pop
+
+   # List stash
+   git stash list
+
    # ถ้าอยากเลือก stash ที่ต้องการ
-   git stash apply
+   git stash apply 'stash@{0}'
 ```
 
 - Change commit message

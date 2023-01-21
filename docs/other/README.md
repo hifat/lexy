@@ -29,3 +29,10 @@ nodemon --exec go run main.go --signal SIGTERM
 1. Open start menu
 2. type "%temp%"
 3. Remove all about golang
+
+### Remove golang using cmd
+- Power shell
+```bash
+# List go-build cache
+Remove-Item -Path $env:TEMP | grep go-build -Recurse -Force
+```

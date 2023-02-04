@@ -74,6 +74,15 @@ module.exports = {
                children: ["financial/money101.md"]
             },
             {
+               title: "🧱 Redis",
+               children: [
+                  "redis/",
+                  "redis/k6.md",
+                  "redis/influxdb.md",
+                  "redis/grafana.md",
+               ]
+            },
+            {
                title: "Other",
                children: ["other/"]
             },

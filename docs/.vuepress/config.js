@@ -83,7 +83,11 @@ module.exports = {
                ]
             },
             {
-               title: "Other",
+               title: "😼 NestJS",
+               children: ["nestjs/"]
+            },
+            {
+               title: "📦 Other",
                children: ["other/"]
             },
          ]

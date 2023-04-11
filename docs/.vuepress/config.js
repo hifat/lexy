@@ -62,18 +62,6 @@ module.exports = {
                children: ["GPS/"]
             },
             {
-               title: "🗺️ Windows command",
-               children: ["WindowsCMD/"]
-            },
-            {
-               title: "🦉 Ubuntu",
-               children: ["Ubuntu/"]
-            },
-            {
-               title: "💸 Financial",
-               children: ["financial/money101.md"]
-            },
-            {
                title: "🧱 Redis",
                children: [
                   "redis/",
@@ -85,6 +73,22 @@ module.exports = {
             {
                title: "😼 NestJS",
                children: ["nestjs/"]
+            },
+            {
+               title: "🗺️ Windows command",
+               children: ["WindowsCMD/"]
+            },
+            {
+               title: "🍎 Mac command",
+               children: ["macCMD/"]
+            },
+            {
+               title: "🦉 Ubuntu",
+               children: ["Ubuntu/"]
+            },
+            {
+               title: "💸 Financial",
+               children: ["financial/money101.md"]
             },
             {
                title: "📦 Other",

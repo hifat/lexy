@@ -37,3 +37,9 @@ nodemon --exec go run main.go --signal SIGTERM
 # List go-build cache
 Remove-Item -Path $env:TEMP | grep go-build -Recurse -Force
 ```
+
+## Install swaggo in Fish Shell
+- After install swaggo
+``
+fish_add_path /Users/noei/go/bin
+``

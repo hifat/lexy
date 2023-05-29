@@ -27,6 +27,12 @@ module.exports = {
                ],
             },
             {
+               title: "😈 Golang",
+               children: [
+                  "golang/",
+               ],
+            },
+            {
                title: "🔶 Duolingo",
                collapsable: true,
                children: [

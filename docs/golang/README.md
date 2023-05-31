@@ -4,7 +4,8 @@
 
 ### Install
 
-- MacOS
+-  MacOS
+
 ```sh
 brew install golang-migrate
 ```
@@ -19,12 +20,14 @@ migrate create -ext sql -dir <dir_path> -seq <schema_name>
 
 ### install
 
-- MacOS
+-  MacOS
+
 ```sh
 brew install sqlc
 ```
 
 ### Config
+
 ```sqlc
 version: "2"
 sql:
@@ -39,12 +42,14 @@ sql:
 ```
 
 ### Create Schema
+
 ```sql
 -- name: <func_name> :<return[one|many]>
 <query_sql_syntax>
 ```
 
-- EX. Insert
+-  EX. Insert
+
 ```sql
 -- name: CreateAccount :one
 INSERT INTO accounts (
@@ -56,7 +61,7 @@ INSERT INTO accounts (
 ) RETURNING *;
 ```
 
-# Docker
+## Docker
 
 ### Execute command pql in docker container
 
@@ -69,8 +74,10 @@ docker exec -it <docker_name> /bin/sh
 ## PostgresSQL
 
 ### Create DB
+
 `<username>` = postgres  
 `<role_name>` = postgres
+
 ```sh
 create db --username=<username> --owner=<role_name> <db_name>
 ```
@@ -87,7 +94,50 @@ dropdb -U <role_name> <db_name>
 docker exec -it <docker_name> createdb --username=<username> --owner=<role_name> <db_name>
 ```
 
-- Shell in <db_name>
+-  Shell in <db_name>
+   ```sh
+   docker exec -it <docker_name> psql -U <role_name> <db_name>
+   ```
+
+## DB Unit Test
+
+### Install testtify package
+
 ```sh
-docker exec -it <docker_name> psql -U <role_name> <db_name>
+go get github.com/stretchr/testify
+```
+
+### Scenario
+
+-  Check no error
+   ```go
+   require.NoError(t, err)
+   ```
+-  Check not empty
+   ```go
+   require.NotEmpty(t, account)
+   ```
+-  Check item
+   ```go
+   require.Equal(t, newAccount.ID, account.ID)
+   ```
+-  Check date
+   ```go
+   require.WithinDuration(t, newAccount.CreatedAt, account.CreatedAt, time.Second)
+   ```
+-  Check error
+   ```go
+   require.Error(t, err)
+   ```
+-  Check equal error
+   ```go
+   require.EqualError(t, err, sql.ErrNoRows.Error())
+   ```
+-  Check len
+   ```go
+   require.Len(t, accounts, 5)
+   ```
+### Run test
+```sh
+go test -v -cover ./...
 ```

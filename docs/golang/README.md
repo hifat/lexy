@@ -158,10 +158,12 @@ go test -v -cover ./...
 ### Install
 
 1. 
-   ```
+   ```sh
    go install github.com/golang/mock/mockgen@v1.6.0
    ```
+
 2. Some time you maybe install in your project
-   ```
+   ```sh
    go install github.com/golang/mock/mockgen@v1.6.0
    ```
+

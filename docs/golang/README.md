@@ -61,6 +61,17 @@ INSERT INTO accounts (
 ) RETURNING *;
 ```
 
+### Change params name
+
+```sql
+-- Balance will params by 'amount' name
+INSERT INTO accounts (
+    balance,
+) VALUES (
+    sqlc.arg(amount)
+) RETURNING *;
+```
+
 ## Docker
 
 ### Execute command pql in docker container
@@ -141,3 +152,16 @@ go get github.com/stretchr/testify
 ```sh
 go test -v -cover ./...
 ```
+
+# Go Mockgen
+
+### Install
+
+1. 
+   ```
+   go install github.com/golang/mock/mockgen@v1.6.0
+   ```
+2. Some time you maybe install in your project
+   ```
+   go install github.com/golang/mock/mockgen@v1.6.0
+   ```

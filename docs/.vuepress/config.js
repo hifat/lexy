@@ -97,6 +97,10 @@ module.exports = {
                children: ["financial/money101.md"]
             },
             {
+               title: "🎹 Logic Pro",
+               children: ["logicPro/"]
+            },
+            {
                title: "📦 Other",
                children: ["other/"]
             },

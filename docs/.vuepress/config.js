@@ -30,6 +30,7 @@ module.exports = {
                title: "😈 Golang",
                children: [
                   "golang/",
+                  "golang/go-swagger.md",
                ],
             },
             {

@@ -6,3 +6,4 @@
 
 ### Tracks, Regions
 - Track zoom: `opt + scroll`
+- Duplicate track: `opt + drag`

@@ -90,7 +90,10 @@ module.exports = {
             },
             {
                title: "🎹 Logic Pro",
-               children: ["logicPro/", "logicPro/plugins.md"],
+               children: [
+                  "logicPro/",
+                  "logicPro/pluginIns.md"
+               ],
             },
             {
                title: "📦 Other",

@@ -6,7 +6,7 @@ module.exports = {
          "/": [
             {
                title: "📓 Lecy",
-               children: ["/"]
+               children: ["/"],
             },
             {
                title: "🐳 Docker",
@@ -17,21 +17,15 @@ module.exports = {
                   "docker/docker-compose.md",
                   "docker/kubernetes.md",
                   "docker/best-practices.md",
-               ]
+               ],
             },
             {
                title: "📮 Type Script",
-               children: [
-                  "typeScript/",
-                  "typeScript/JSDocs.md"
-               ],
+               children: ["typeScript/", "typeScript/JSDocs.md"],
             },
             {
                title: "😈 Golang",
-               children: [
-                  "golang/",
-                  "golang/go-swagger.md",
-               ],
+               children: ["golang/", "golang/go-swagger.md"],
             },
             {
                title: "🔶 Duolingo",
@@ -47,26 +41,23 @@ module.exports = {
                   "duolingo/verb.md",
                   "duolingo/infinitive.md",
                   "duolingo/adjective_3.md",
-               ]
+               ],
             },
             {
                title: "🎭 HCI",
-               children: ["HCI/"]
+               children: ["HCI/"],
             },
             {
                title: "⚙️ ML",
-               children: [
-                  "ML/",
-                  "ML/test.md",
-               ]
+               children: ["ML/", "ML/test.md"],
             },
             {
                title: "🔀 Git",
-               children: ["git/"]
+               children: ["git/"],
             },
             {
                title: "🗺️ GPS",
-               children: ["GPS/"]
+               children: ["GPS/"],
             },
             {
                title: "🧱 Redis",
@@ -75,37 +66,37 @@ module.exports = {
                   "redis/k6.md",
                   "redis/influxdb.md",
                   "redis/grafana.md",
-               ]
+               ],
             },
             {
                title: "😼 NestJS",
-               children: ["nestjs/"]
+               children: ["nestjs/"],
             },
             {
                title: "🗺️ Windows command",
-               children: ["WindowsCMD/"]
+               children: ["WindowsCMD/"],
             },
             {
                title: "🍎 Mac command",
-               children: ["macCMD/"]
+               children: ["macCMD/"],
             },
             {
                title: "🦉 Ubuntu",
-               children: ["Ubuntu/"]
+               children: ["Ubuntu/"],
             },
             {
                title: "💸 Financial",
-               children: ["financial/money101.md"]
+               children: ["financial/money101.md"],
             },
             {
                title: "🎹 Logic Pro",
-               children: ["logicPro/"]
+               children: ["logicPro/", "logicPro/plugins.md"],
             },
             {
                title: "📦 Other",
-               children: ["other/"]
+               children: ["other/"],
             },
-         ]
-      }
-   }
+         ],
+      },
+   },
 };

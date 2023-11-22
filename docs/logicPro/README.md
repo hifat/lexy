@@ -6,4 +6,9 @@
 
 ### Tracks, Regions
 - Track zoom: `opt + scroll`
-- Duplicate track: `opt + drag`
+- Duplicate regions: `opt + drag` (Also use this with track)
+- Duplicate only track: `cmd + d`
+- Join region: `j`
+
+### Key
+- Transpose: `opt + [Up | Dwn]`

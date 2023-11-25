@@ -18,3 +18,8 @@
 ```bash
    openssl rand -base64 <length_number>
 ```
+
+- Remove .DS_Store
+```shell
+find . -name ".DS_Store" -delete
+```

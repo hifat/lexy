@@ -12,3 +12,9 @@
 
 ### Key
 - Transpose: `opt + [Up | Dwn]`
+
+### Piano Roll
+- Quantize: drag midi note then choose "Time Quantize" and press `Q`
+- Quick Repeat Note: Choose "Time Quantize" and press `drag left to right` and you can press `shift` after drag for control velocity
+- Align Overlap Note: Drag overlap note press `\` and choose `shorten`
+- Align no gaps: Drag note press `shift + \`

@@ -73,6 +73,12 @@ module.exports = {
                children: ["nestjs/"],
             },
             {
+               title: "🔐 Security",
+               children: [
+                  "security/OWASP.md"
+               ],
+            },
+            {
                title: "🗺️ Windows command",
                children: ["WindowsCMD/"],
             },

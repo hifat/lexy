@@ -17,6 +17,10 @@ A10: SSRF (Server-Side Request Forgery)
 	เอา From จากเว็บเป้าหมายมาใส่เวลาเราแล้วดัก Credentials
    - Strict URL Filter
 
+### Tools
+   - OWASP Xenotix XSS Exploit Framework
+   - Cookie Manager
+
 ## Reference
 - [owasp.org](https://owasp.org/www-project-top-ten/)  
 - [# มารู้จัก OWASP มาตรฐาน Security ของการทำ website กัน](https://www.youtube.com/watch?v=XVbSl0R_T7M&ab_channel=mikelopster)

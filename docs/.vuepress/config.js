@@ -53,7 +53,10 @@ module.exports = {
             },
             {
                title: "🔀 Git",
-               children: ["git/"],
+               children: [
+                  "git/",
+                  "git/ssh-key.md",
+               ],
             },
             {
                title: "🗺️ GPS",

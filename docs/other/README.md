@@ -43,3 +43,8 @@ Remove-Item -Path $env:TEMP | grep go-build -Recurse -Force
 ``
 fish_add_path /Users/noei/go/bin
 ``
+
+## Add Go PATH
+```sh
+export PATH="$PATH:$(go env GOPATH)/bin"
+```

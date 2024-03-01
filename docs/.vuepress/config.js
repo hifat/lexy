@@ -82,6 +82,13 @@ module.exports = {
                ],
             },
             {
+               title: "🖥️  iTerm2",
+               children: [
+                  "iTerm2/",
+                  "iTerm2/issue-report.md",
+               ],
+            },
+            {
                title: "🗺️ Windows command",
                children: ["WindowsCMD/"],
             },

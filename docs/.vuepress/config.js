@@ -112,6 +112,10 @@ module.exports = {
                ],
             },
             {
+               title: "‼️ Issue Report",
+               children: ["issueREport/nodeje.md"],
+            },
+            {
                title: "📦 Other",
                children: ["other/"],
             },

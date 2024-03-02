@@ -10,3 +10,4 @@
    ```sh
    brew install pkg-config cairo pango libpng jpeg giflib librsvg
    ```
+   [Reference issue in rabbit](https://www.reddit.com/r/learnpython/comments/17ciqnl/modulenotfounderror_no_module_named_distutils_on/)

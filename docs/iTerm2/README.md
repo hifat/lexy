@@ -11,16 +11,15 @@ chsh -s /opt/homebrew/bin/fish
 
 
 ## Noei Profile
-- Appearance -> Tabds -> check `Show tab bar even when...`
 - Profile -> Fonts change to `MesloLGS NF`
-- Settings
+- Appearance -> Tabds -> check like this
    - [ ] Show tab bar even when there is only one tab
    - [ ] Preserve window size when tab bar shows or hides
-   - [x] Show tab numbers
-   - [x] Tabs have close buttons
-   - [x] Show activity indicator
-   - [x] Show new-output indicator
+   - ✅ Show tab numbers
+   - ✅ Tabs have close buttons
+   - ✅ Show activity indicator
+   - ✅ Show new-output indicator
    - [ ] Flash tab bar when switching tabs in fullscreen
-   - [x] Show tab bar in fullscreen
+   - ✅ Show tab bar in fullscreen
    - [ ] Stretch tabs to fill bar
    - [ ] Support basic HTML tags in tab titles

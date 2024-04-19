@@ -76,6 +76,10 @@ module.exports = {
                children: ["nestjs/"],
             },
             {
+               title: "📊 Oracle DB",
+               children: ["oracle/"],
+            },
+            {
                title: "🔐 Security",
                children: [
                   "security/OWASP.md"

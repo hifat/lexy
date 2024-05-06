@@ -112,12 +112,12 @@ module.exports = {
                title: "🎹 Logic Pro",
                children: [
                   "logicPro/",
-                  "logicPro/pluginIns.md"
+                  "logicPro/plugin-instrument.md"
                ],
             },
             {
                title: "‼️ Issue Report",
-               children: ["issueREport/nodeje.md"],
+               children: ["issueReport/nodeje.md"],
             },
             {
                title: "📦 Other",

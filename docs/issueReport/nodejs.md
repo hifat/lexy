@@ -11,3 +11,11 @@
    brew install pkg-config cairo pango libpng jpeg giflib librsvg
    ```
    [Reference issue in rabbit](https://www.reddit.com/r/learnpython/comments/17ciqnl/modulenotfounderror_no_module_named_distutils_on/)
+
+## canvas error
+
+(mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64'))
+
+```
+npm run rebuild
+```

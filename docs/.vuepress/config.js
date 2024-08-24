@@ -117,7 +117,7 @@ module.exports = {
             },
             {
                title: "‼️ Issue Report",
-               children: ["issueReport/nodeje.md"],
+               children: ["issueReport/nodejs.md"],
             },
             {
                title: "📦 Other",

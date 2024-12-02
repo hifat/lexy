@@ -86,6 +86,13 @@ module.exports = {
                ],
             },
             {
+               title: "🔎 Elasticsearch",
+               children: [
+                  "elasticsearch/",
+                  "elasticsearch/search-and-query.md"
+               ],
+            },
+            {
                title: "🖥️  iTerm2",
                children: [
                   "iTerm2/",

@@ -1,4 +1,4 @@
-# Shell
+# sh
 
 - Check running process on port
 ```bash
@@ -20,11 +20,11 @@
 ```
 
 - Remove .DS_Store
-```shell
+```sh
 find . -name ".DS_Store" -delete
 ```
 
 - Check IP
-```shell
+```sh
 ifconfig | grep "inet " | grep -v 127.0.0.1
 ```

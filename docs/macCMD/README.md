@@ -23,3 +23,8 @@
 ```shell
 find . -name ".DS_Store" -delete
 ```
+
+- Check IP
+```shell
+ifconfig | grep "inet " | grep -v 127.0.0.1
+```

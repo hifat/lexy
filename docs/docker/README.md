@@ -1,7 +1,7 @@
 # Basic
 
 ## Build the flask API server into Docker image
-```bash
+```docker
 FROM python:3                          # เอา image ไหน
 COPY . /app                            # copy ข้อมูลทั้งหมดจาก dir ปัจจุบันไปไว้ข้างใน app
 WORKDIR /app                           # cd เข้าไปใน dir app

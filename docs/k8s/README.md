@@ -41,3 +41,8 @@ kubectl delete pod/service --all
 
 kubectl delete all --all
 ```
+
+- Delete deployment
+```bash
+kubectl delete deployment dp-name
+```

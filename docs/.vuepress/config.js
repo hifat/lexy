@@ -20,6 +20,12 @@ module.exports = {
                ],
             },
             {
+               title: "⛴️ k8s",
+               children: [
+                  "k8s/",
+               ],
+            },
+            {
                title: "📮 Type Script",
                children: ["typeScript/", "typeScript/JSDocs.md"],
             },

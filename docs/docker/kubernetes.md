@@ -6,45 +6,45 @@
 Docker stack จะทำให้คนที่ไม่ได้รู้ K8s มากสามารถใช้งาน K8s ได้ผ่าน syntax ที่เราคุ้นเคยอย่าง docker-compose
 
 ## Start to use
-```docker
+```bash
 docker swarm init
 ```
 
 ## Deploy
-```docker
+```bash
 docker stack deploy kubeops-stack -c docker-compose.yml
 ```
 
 ## list stack some service
-```docker
+```bash
 docker stack ps kubeops-stack
 ```
 
 ## Show forward services
-```docker
+```bash
 kubectl get services
 ```
 
 ## Show container running that is not service level
-```docker
+```bash
 kubectl get pods
 ```
 
 ## Verifying and cleanup Docker Stack
-```docker
+```bash
 export IP=${kubectl get services -l com.docker.service.id=kubeops-stack-spring -o jsonpath='{.item[*].status.loadBalance.ingress[0].ip}'}
 
 curl http://$IP:8081
 ```
 
 ## Remove stack
-```docker
+```bash
 docker stack rm kubeops-stack
 ```
 
 
 ## Kube delete service
-```docker
+```bash
 kubectl delete servics -l "com.docker.service.id in (kubeops-stack-kubeops-mysql,kubeops-stack-spring,com)"
 ```
 =================================
@@ -52,6 +52,6 @@ kubectl delete servics -l "com.docker.service.id in (kubeops-stack-kubeops-mysql
 # Trip
 
 ## See modules in image PHP
-```docker
+```bash
 docker run php:8.0.3-fpm-buster php -m    # php -m : This is command for php only
 ```

@@ -1,7 +1,7 @@
 # iTerm2
 
 ## Change Default Shell
-```sh
+```bash
 chsh -s /opt/homebrew/bin/fish
 ```
 

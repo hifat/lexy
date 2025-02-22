@@ -4,25 +4,25 @@ GET --> controller --> service
 
 ### Create module
 
-```shell
+```bashell
 nest g module todos
 ```
 
 ### Create controller
 
-```shell
+```bashell
 nest g controller todos
 ```
 
 ### Create service
 
-```shell
+```bashell
 nest g service todos
 ```
 
 ### Create resource
 
-```shell
+```bashell
 nest g resource todos
 ```
 

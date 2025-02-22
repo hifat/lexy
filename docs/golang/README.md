@@ -6,13 +6,13 @@
 
 -  MacOS
 
-```sh
+```bash
 brew install golang-migrate
 ```
 
 ### Create Migration
 
-```sh
+```bash
 migrate create -ext sql -dir <dir_path> -seq <schema_name>
 ```
 
@@ -22,7 +22,7 @@ migrate create -ext sql -dir <dir_path> -seq <schema_name>
 
 -  MacOS
 
-```sh
+```bash
 brew install sqlc
 ```
 
@@ -78,7 +78,7 @@ INSERT INTO accounts (
 
 You can get `<docker_name>` by `docker ps` and see the name column
 
-```sh
+```bash
 docker exec -it <docker_name> /bin/sh
 ```
 
@@ -89,24 +89,24 @@ docker exec -it <docker_name> /bin/sh
 `<username>` = postgres  
 `<role_name>` = postgres
 
-```sh
+```bash
 create db --username=<username> --owner=<role_name> <db_name>
 ```
 
 ### Drop DB
 
-```sh
+```bash
 dropdb -U <role_name> <db_name>
 ```
 
 ### Create DB by docker cmd
 
-```sh
+```bash
 docker exec -it <docker_name> createdb --username=<username> --owner=<role_name> <db_name>
 ```
 
 -  Shell in <db_name>
-   ```sh
+   ```bash
    docker exec -it <docker_name> psql -U <role_name> <db_name>
    ```
 
@@ -114,7 +114,7 @@ docker exec -it <docker_name> createdb --username=<username> --owner=<role_name>
 
 ### Install testtify package
 
-```sh
+```bash
 go get github.com/stretchr/testify
 ```
 
@@ -149,7 +149,7 @@ go get github.com/stretchr/testify
    require.Len(t, accounts, 5)
    ```
 ### Run test
-```sh
+```bash
 go test -v -cover ./...
 ```
 
@@ -158,12 +158,12 @@ go test -v -cover ./...
 ### Install
 
 1. 
-   ```sh
+   ```bash
    go install github.com/golang/mock/mockgen@v1.6.0
    ```
 
 2. Some time you maybe install in your project
-   ```sh
+   ```bash
    go install github.com/golang/mock/mockgen@v1.6.0
    ```
 

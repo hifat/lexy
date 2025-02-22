@@ -8,7 +8,7 @@ runtime + os pakcage ถ้าเริ่มต้นแนะนำให้�
 
 -  สามารถใช้ exec เพื่อเข้าไปใช้ใช้ cmd ใน image ได้
 
-```docker
+```bash
 docker exec -it <IMAGE_NAME> <SHELL_PATH>
 
 # Example
@@ -19,7 +19,7 @@ docker exec -it spring-non-distroless-app /bin/sh
 
 runtime only
 
-```docker
+```bash
 FROM gcr.io/distroless/java:11
 
 COPY spring-distroless-app.jar deployment.jar
@@ -31,13 +31,13 @@ ENTRYPOINT [ "java", "-jar", "./deployment.jar" ]$
 
 ### Build
 
-```docker
+```bash
 docker build -t spring-distroless-app .
 ```
 
 ### Run
 
-```docker
+```bash
 docker run --name spring-distroless-app -d -p 8080:8080 spring-distroless-app
 ```
 
@@ -58,7 +58,7 @@ Auto build pakcage
 - เวลา container ถูก kill ข้อมูลทั้งหมดใน container ก็จะหายทั้งหมดเราเลยต้อง Mount ข้อมูลออกมาไว้ใน local โดยใช้ -v
 - Not recomend for production เพราะถ้าเกิด Culser ตายข้อมูลจะหายไปด้วย ถ้าจะใช้บน Production ให้ใช้พวก Storage Cloud
 
-```docker
+```bash
 -v <lOCALE_PAHH>/:/<CONTAINER_PATH>
 ```
 
@@ -66,13 +66,13 @@ Auto build pakcage
 
 Default driver is "bridge" from [bridge, host, null]
 
-```docker
+```bash
 docker network create <NETWORK_NAME>
 ```
 
 ### Network list
 
-```docker
+```bash
 docker network ls
 ```
 
@@ -82,7 +82,7 @@ docker network ls
 mkdir /tmp/mysql/data
 ```
 
-```docker
+```bash
 docker run -d --name kubeops-mysql \
    -e MYSQL_ROOT_PASSWORD=kubeops_root \
    -e MYSQL_USER=kubeops_user \
@@ -98,7 +98,7 @@ docker run -d --name kubeops-mysql \
 ``` 
 
 ### Test
-```docker
+```bash
 docker exec -it kubeops-mysql sh
 ```
 
@@ -109,12 +109,12 @@ ls
 ```
 
 ### Run the Web application on Docker Instance
-```docker
+```bash
 docker run -d --name kubeops-web -p 8081:8088 --net kubeops-network sikiryl/spring-app
 ```
 
 ### Docker logs
-```docker
+```bash
 docker logs <CONTAINER_NAME | ID>
 ```
 

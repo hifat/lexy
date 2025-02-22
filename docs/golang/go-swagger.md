@@ -24,7 +24,7 @@
 ```
 
 2. Swag init
-```shell
+```bashell
 swag init --generalInfo=./internal/app/routes/routeV1/v1.go --instanceName v1
 ```
 

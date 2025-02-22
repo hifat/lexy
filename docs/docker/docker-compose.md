@@ -29,7 +29,7 @@ services:
 แต่ละ version อาจจะมี syntax ที่แตกต่างกัน [อ่านเพิ่มเติม](https://docs.docker.com/compose/compose-file/compose-file-v3/)
 
 ## Run some services
-```docker
+```bash
 docker-compose up <SERVICE_NAME>
 
 # Run background
@@ -37,7 +37,7 @@ docker-compose up -d <SERVICE_NAME>
 ```
 
 ## Kill some process
-```docker
+```bash
 docker-compose down <SERVICE_NAME>
 
 # Run background
@@ -46,7 +46,7 @@ docker-compose down -d <SERVICE_NAME>
 
 ## Run all services
 docker-compose จะ run services ทั้งหมดที่อยู่ใน docker-compsoe.yml
-```docker
+```bash
 docker-compose up
 
 # Run background
@@ -54,17 +54,17 @@ docker-compose up -d
 ```
 
 ## Stop all services
-```docker
+```bash
 docker-compose stop
 ```
 
 ## Remove and stop all image in compose
-```docker
+```bash
 docker-compose down
 ```
 
 ## Assign name(Not recomend)
 You have to add property "container_name" ไม่แนะนำเพราะปล่อยมันตั้งชื่อแบบ auto ดีกว่าเพราะจะได้ make sure ว่าชื่อจะเป็นซ้ำแน่นอน จะได้รับ trafic ใด้หลายช่องทางพร้อมที่จะทำให้มัน HA ตลอดเวลา
-```docker
+```bash
 container_name: <ASIGN_NAME>
 ```

@@ -20,11 +20,11 @@
 ```
 
 - Remove .DS_Store
-```sh
+```bash
 find . -name ".DS_Store" -delete
 ```
 
 - Check IP
-```sh
+```bash
 ifconfig | grep "inet " | grep -v 127.0.0.1
 ```

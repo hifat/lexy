@@ -1,6 +1,6 @@
 # Redis
 
-```docker
+```bash
 version: '3.9'
 
 services:
@@ -55,7 +55,7 @@ pwd
 ```
 
 Add in docker-compose
-```docker
+```bash
    volumes:
       - ./data/redis:/data
       - ./configs/redis.conf:/redis.conf
@@ -129,7 +129,7 @@ Learin in:
    - influxdb
    - grafana
 
-```docker
+```bash
 docker compose up influxdb grafana
 ```
 

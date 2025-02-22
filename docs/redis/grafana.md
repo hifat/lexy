@@ -1,10 +1,10 @@
 # Grafana
 
-```docker
+```bash
 docker pull grafana/grafana
 ```
 
-```docker
+```bash
 grafana:
       image: grafana/grafana
       container_name: grafana
@@ -17,7 +17,7 @@ grafana:
         - ./data/grafana:/var/lib/grafana
 ```
 
-```docker
+```bash
 docker compose up influxdb grafana
 ```
 

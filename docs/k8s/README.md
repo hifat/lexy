@@ -1,42 +1,42 @@
 # K8s
 
 - See all resource
-```sh
+```bash
 kubectl get all
 ```
 
 - See pods
-```sh
+```bash
 kubectl get pods
 ```
 
 - Apply file
-```sh
+```bash
 kubectl apply -f myfile.yaml
 ```
 
 - See all services
-```sh
+```bash
 kubectl get services
 ```
 
 - See logs in pod
-```sh
+```bash
 kubectl logs mypod
 ```
 
 - Delete pod
-```sh
+```bash
 kubectl delete pod mypod
 ```
 
 - Delete service
-```sh
+```bash
 kubectl delete service my service
 ```
 
 - Delete pod or all services
-```sh
+```bash
 kubectl delete pod/service --all
 
 kubectl delete all --all

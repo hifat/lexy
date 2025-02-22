@@ -2,11 +2,11 @@
 
 ถ้าใช้ 2.6.6 จะมี Dashboard ในตัวด้วยอาจจะไม่จำเป็นต้องใช้ Grafana
 
-```docker
+```bash
 docker pull influxdb:1.8.10
 ```
 
-```docker
+```bash
 influxdb:
    image: influxdb:1.8.10
    container_name: influxdb

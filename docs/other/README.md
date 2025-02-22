@@ -45,6 +45,6 @@ fish_add_path /Users/noei/go/bin
 ``
 
 ## Add Go PATH
-```sh
+```bash
 export PATH="$PATH:$(go env GOPATH)/bin"
 ```

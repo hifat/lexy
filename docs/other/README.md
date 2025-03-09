@@ -18,7 +18,7 @@
 
 ## Golang
 
-- nodemon live reload
+-  nodemon live reload
 
 ```bash
 nodemon --exec go run main.go --signal SIGTERM
@@ -32,19 +32,26 @@ nodemon --exec go run main.go --signal SIGTERM
 
 ### Remove golang using cmd
 
-- Power shell
+-  Power shell
+
 ```bash
 # List go-build cache
 Remove-Item -Path $env:TEMP | grep go-build -Recurse -Force
 ```
 
 ## Install swaggo in Fish Shell
-- After install swaggo
-``
-fish_add_path /Users/noei/go/bin
-``
+
+-  After install swaggo
+   `fish_add_path /Users/noei/go/bin`
 
 ## Add Go PATH
+
 ```bash
 export PATH="$PATH:$(go env GOPATH)/bin"
 ```
+
+## VS code toggle copilot
+
+-  Go to setting and search
+
+`github.copilot.editor.enableAutoCompletions`

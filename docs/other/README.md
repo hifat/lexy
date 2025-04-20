@@ -55,3 +55,12 @@ export PATH="$PATH:$(go env GOPATH)/bin"
 -  Go to setting and search
 
 `github.copilot.editor.enableAutoCompletions`
+
+## VS Code not support go new version
+
+```bash
+go get -u github.com/go-delve/delve/cmd/dlv
+```
+
+- In VS code `cmd + shift + p` and type `Go: Install/Update Tools`
+- Choose `dlv@latest`

@@ -23,6 +23,7 @@ module.exports = {
                title: "⛴️ k8s",
                children: [
                   "k8s/",
+                  "k8s/context.md",
                ],
             },
             {

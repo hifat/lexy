@@ -71,3 +71,10 @@ kubectl config set-context docker-desktop --namespace=my-namespace
 | kubectl config set-context docker-desktop --namespace=x | ตั้ง namespace ของ docker-desktop เป็น x |
 
 ---
+
+### Trip
+- Add gcp context
+```bash
+gcloud container clusters get-credentials hello-sekai-shop-ms --z
+one australia-southeast1-b --project hello-sekai-shop-ms
+```

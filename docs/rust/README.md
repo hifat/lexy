@@ -23,7 +23,7 @@ gdb <program_name> # Use binary file build
 > x # Xmin
 > xinfo &<var_name> # Get var info
 > x <mem_address> # Get value
-> x /d <mem_address> # Get value base 10 numbers
+> x /d <mem_address> # Get value base 10 numbers (/d, /s, /f by type of yours)
 
 > c # Continue to next break point
 > p <var_name> # print address and show type

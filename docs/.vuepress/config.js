@@ -21,10 +21,7 @@ module.exports = {
             },
             {
                title: "⛴️ k8s",
-               children: [
-                  "k8s/",
-                  "k8s/context.md",
-               ],
+               children: ["k8s/", "k8s/context.md"],
             },
             {
                title: "📮 Type Script",
@@ -60,10 +57,7 @@ module.exports = {
             },
             {
                title: "🔀 Git",
-               children: [
-                  "git/",
-                  "git/ssh-key.md",
-               ],
+               children: ["git/", "git/ssh-key.md"],
             },
             {
                title: "🗺️ GPS",
@@ -88,23 +82,18 @@ module.exports = {
             },
             {
                title: "🔐 Security",
-               children: [
-                  "security/OWASP.md"
-               ],
+               children: ["security/OWASP.md"],
             },
             {
                title: "🔎 Elasticsearch",
                children: [
                   "elasticsearch/",
-                  "elasticsearch/search-and-query.md"
+                  "elasticsearch/search-and-query.md",
                ],
             },
             {
                title: "🖥️  iTerm2",
-               children: [
-                  "iTerm2/",
-                  "iTerm2/issue-report.md",
-               ],
+               children: ["iTerm2/", "iTerm2/issue-report.md"],
             },
             {
                title: "🗺️ Windows command",
@@ -124,10 +113,11 @@ module.exports = {
             },
             {
                title: "🎹 Logic Pro",
-               children: [
-                  "logicPro/",
-                  "logicPro/plugin-instrument.md"
-               ],
+               children: ["logicPro/", "logicPro/plugin-instrument.md"],
+            },
+            {
+               title: "🤖 n8n",
+               children: ["n8n/"],
             },
             {
                title: "‼️ Issue Report",

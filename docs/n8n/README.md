@@ -1,4 +1,6 @@
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/sn10TLmukPI" title="No Code สร้างเครื่องผลิตคลิปสั้นไวรัล ด้วย AI + n8n ในคลิปเดียว! || ด้วยงบ 1 บาท/คลิป!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+# สร้างเครื่องผลิตคลิปสั้นไวรัล
+
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/sn10TLmukPI" title="No Code สร้างเครื่องผลิตคลิปสั้นไวรัล ด้วย AI + n8n ในคลิปเดียว! || ด้วยงบ 1 บาท/คลิป!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ตามคลิปวิดีโอที่คุณให้มา สามารถสรุปขั้นตอนการสร้างคลิปสั้นไวรัลเกี่ยวกับสัตว์ด้วย AI และ n8n ได้ดังนี้:
 

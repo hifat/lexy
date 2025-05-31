@@ -120,6 +120,10 @@ module.exports = {
                children: ["n8n/"],
             },
             {
+               title: "▶️ YouTube",
+               children: ["youtube/go-garble.md"],
+            },
+            {
                title: "‼️ Issue Report",
                children: ["issueReport/nodejs.md"],
             },

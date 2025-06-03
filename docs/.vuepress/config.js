@@ -92,6 +92,12 @@ module.exports = {
                ],
             },
             {
+               title: "🗼 Infra",
+               children: [
+                  "infra/jenkins.md",
+               ],
+            },
+            {
                title: "🖥️  iTerm2",
                children: ["iTerm2/", "iTerm2/issue-report.md"],
             },

@@ -32,5 +32,5 @@ gdb <program_name> # Use binary file build
 
 #### Handle String Mem
 
-![Handle String Mem](./assets/image/mem_str.webp)
+![Handle String Mem](./assets/image/mem_str.jpg)
 *https://youtu.be/GVCR8b_33zo?t=4029*

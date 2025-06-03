@@ -32,6 +32,10 @@ module.exports = {
                children: ["golang/", "golang/go-swagger.md"],
             },
             {
+               title: "🦀 Rust",
+               children: ["rust/"],
+            },
+            {
                title: "🔶 Duolingo",
                collapsable: true,
                children: [
@@ -93,9 +97,7 @@ module.exports = {
             },
             {
                title: "🗼 Infra",
-               children: [
-                  "infra/jenkins.md",
-               ],
+               children: ["infra/jenkins.md"],
             },
             {
                title: "🖥️  iTerm2",

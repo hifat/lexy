@@ -55,3 +55,7 @@ volumes:
 
 
 ⸻
+
+## Upgrade Java Version
+
+[See Document](https://www.jenkins.io/doc/book/platform-information/upgrade-java-to-21/index.html)

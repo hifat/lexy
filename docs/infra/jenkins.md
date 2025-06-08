@@ -59,3 +59,22 @@ volumes:
 ## Upgrade Java Version
 
 [See Document](https://www.jenkins.io/doc/book/platform-information/upgrade-java-to-21/index.html)
+
+
+## Error Report
+
+```
+Key exchange was not finished, connection is closed.
+SSH Connection failed with IOException: "Key exchange was not finished, connection is closed.", retrying in 15 seconds. There are 9 more retries left.
+/var/lib/jenkins/.ssh/known_hosts [SSH] No Known Hosts file was found at /var/lib/jenkins/.ssh/known_hosts. Please ensure one is created at this path and that Jenkins can read it.
+```
+
+# บน Jenkins Controller
+
+```sh
+sudo -u jenkins mkdir -p /var/lib/jenkins/.ssh
+sudo -u jenkins ssh-keyscan -H 192.168.1.13 >> /var/lib/jenkins/.ssh/known_hosts
+
+# Optional คำสั่งด้านบนยังไม่ได้
+sudo -u jenkins chmod 644 /var/lib/jenkins/.ssh/known_hosts
+```

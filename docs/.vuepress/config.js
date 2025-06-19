@@ -129,7 +129,9 @@ module.exports = {
             },
             {
                title: "▶️ YouTube",
+               children: ["youtube/cyber-security-bookmark.md"],
                children: ["youtube/go-garble.md"],
+               children: ["youtube/mongo-db-principle.md"],
             },
             {
                title: "‼️ Issue Report",

@@ -1,3 +1,5 @@
+# MongoDB Principle
+
 <iframe width="100%" height="500" src="https://www.youtube.com/embed/xY2NwsYHpV4" title="golang obfuscated malware goes crazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ในวิดีโอนี้ คุณ Xen และ Frank ได้มานำเสนอเกี่ยวกับ **MongoDB Performance: Patterns and Best Practices** โดยมีจุดประสงค์เพื่อให้ผู้ฟังได้รับความรู้และเทคนิคใหม่ๆ ที่สามารถนำไปปรับใช้ในการปรับแต่งและจัดการประสิทธิภาพของ MongoDB ได้อย่างมีประสิทธิภาพครับ \[[01:14](http://www.youtube.com/watch?v=xY2NwsYHpV4&t=74)\]

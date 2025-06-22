@@ -17,14 +17,23 @@
 
 ```yaml
 network:
-version: 2
-ethernets:
-    enp0s1:
-    dhcp4: no
-    addresses: [192.168.1.200/24]
-    gateway4: 192.168.1.1
-    nameservers:
+  version: 2
+  ethernets:
+    enp0s1:  # ตรวจชื่อ interface ด้วย `ip a`
+      dhcp4: no
+      addresses:
+        - 192.168.1.200/24
+      nameservers:
         addresses: [1.1.1.1, 8.8.8.8]
+      routes:
+        - to: default
+          via: 192.168.1.1
+```
+
+สั่ง:
+
+```bash
+sudo netplan apply
 ```
 
 3.	จากนั้นคุณสามารถใช้ hosts หรือ DNS ภายในชี้ jenkins.local → 192.168.1.200
@@ -38,27 +47,6 @@ ethernets:
 ✅ กรณีที่คุณใช้ Ubuntu Server (20.04+), Debian 10+
 
 ส่วนใหญ่ใช้ระบบ Netplan เหมือนกัน
--	✅ วิธี config แบบใช้ yaml (/etc/netplan/*.yaml) จะ เหมือนกัน 100% ระหว่าง Ubuntu กับ Debian
--	ตัวอย่าง (ซ้ำเพื่อความชัดเจน):
-
-```yaml
-network:
-  version: 2
-  ethernets:
-    enp0s1:  # ชื่อ interface ตรวจได้จาก `ip a`
-      dhcp4: no
-      addresses: [192.168.1.200/24]
-      gateway4: 192.168.1.1
-      nameservers:
-        addresses: [1.1.1.1, 8.8.8.8]
-```
-
-สั่ง:
-
-```bash
-sudo netplan apply
-```
-
 
 ⸻
 

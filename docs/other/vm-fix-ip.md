@@ -1,72 +1,73 @@
-ปัญหาที่คุณเจอคือ IP ของ VM เปลี่ยนทุกครั้งที่รีสตาร์ทเครื่องจริง (host) ซึ่งทำให้ config ที่อ้างอิง IP พัง เช่น Jenkins URL, webhook, etc.
-การใช้ Domain name มาช่วยอ้างแทน IP เป็นทางออกที่ดีมาก แต่ต้อง จับคู่ domain → IP แบบ dynamic ให้ได้ด้วย
+ได้แน่นอน! คุณสามารถใช้ domain name ภายในเครือข่าย Local ได้ เช่น ตั้งชื่อว่า myapp.local หรือ api.mysite.lan แล้วให้มันชี้ไปที่เครื่องที่รัน NGINX อยู่ — โดย ไม่ต้องซื้อ domain จริง ก็ใช้ได้ภายในบ้านหรือออฟฟิศของคุณเอง
 
 ⸻
 
-🔧 ทางออกที่ผมแนะนำมี 3 แนวทาง ขึ้นกับว่าอยากง่าย, ยืดหยุ่น หรือถาวร:
+✅ วิธีทำ (เลือกตามความเหมาะสม):
 
-⸻
+🧩 วิธีที่ 1: แก้ hosts file (ง่ายสุด)
 
-✅ วิธีที่ 1: Fix IP Address ของ VM (ดีที่สุดถ้าทำได้)
+ใช้ได้กับเครื่องในเครือข่ายไม่กี่เครื่อง
 
-ให้ VM ใช้ Static IP ภายใน network เช่น 192.168.1.200 แล้วใช้ hosts หรือ DNS local ชี้ domain → IP ถาวร
+🔧 ตัวอย่าง (ในเครื่อง client ที่จะเข้าถึง)
 
-วิธีทำ:
-	1.	เข้าไป config network ใน UTM VM → เปลี่ยนเป็น Bridged Mode
-	2.	ตั้งค่า IP ภายใน VM ให้เป็น static เช่นใน /etc/netplan/*.yaml (ถ้าใช้ Ubuntu)
+เปิดไฟล์ hosts:
+	•	macOS/Linux: /etc/hosts
+	•	Windows: C:\Windows\System32\drivers\etc\hosts
 
-network:
-  version: 2
-  ethernets:
-    enp0s1:
-      dhcp4: no
-      addresses: [192.168.1.200/24]
-      gateway4: 192.168.1.1
-      nameservers:
-        addresses: [1.1.1.1, 8.8.8.8]
+เพิ่มบรรทัดแบบนี้:
 
-	3.	จากนั้นคุณสามารถใช้ hosts หรือ DNS ภายในชี้ jenkins.local → 192.168.1.200
+```txt
+192.168.1.100 myapp.local
+```
 
-⸻
+192.168.1.100 คือ IP ของเครื่องที่รัน NGINX
+myapp.local คือชื่อที่คุณอยากเรียกใน browser เช่น http://myapp.local
 
-⚙️ วิธีที่ 2: ใช้ Dynamic DNS ภายใน Local
+✅ ใช้ได้เลยทันที:
 
-ถ้าคุณใช้ IP แบบ DHCP แล้วไม่อยาก fix IP:
+```sh
+curl http://myapp.local
+```
 
-🔁 ใช้ Script + dnsmasq + hostname
-	1.	ติดตั้ง dnsmasq บนเครื่องจริง หรือ VM ตัวใดก็ได้
-	2.	ให้ dnsmasq map domain เช่น jenkins.local → ไปยัง hostname ของ VM เช่น jenkins-vm
-	3.	ใช้ avahi-daemon / hostname -I ตรวจสอบ IP จริงแล้วอัพเดต DNS record auto
-
-หรือ
-
-🧠 ใช้ Script ตรวจ IP แล้วอัพเดตไฟล์ hosts อัตโนมัติ
-
-#!/bin/bash
-IP=$(ping -c 1 jenkins-vm.local | grep "PING" | awk '{print $3}' | tr -d '()')
-sudo sed -i "/jenkins.local/d" /etc/hosts
-echo "$IP jenkins.local" | sudo tee -a /etc/hosts
-
-แล้ว cron หรือ systemd timer สั่งรันทุกครั้งหลังเปิดเครื่อง
-
-⸻
-
-🔁 วิธีที่ 3: ใช้ host.docker.internal หรือ IP แบบ bridge (ถ้าใช้ Docker)
-
-ถ้า VM ใช้ Docker เป็นหลัก: Docker บน Mac รองรับ host.docker.internal เพื่อชี้กลับไปที่ host โดยไม่ต้องรู้ IP จริง
-
-แต่ถ้า VM แบบ UTM แยกเป็นเครื่องใหม่จริง ๆ (Bridge Mode) วิธีนี้ใช้ไม่ได้
-
-⸻
-
-🏁 สรุปสิ่งที่แนะนำ:
-
-ทางเลือก	ข้อดี	ข้อเสีย
-✅ Fix IP ของ VM	เสถียร, ไม่พัง, ง่ายสุด	ต้อง config network ใน VM
-🔁 ใช้ DNS ภายใน (dnsmasq)	ชื่อจำง่าย, update ได้	ต้องติดตั้ง DNS server
-🧠 Script update hosts	ทำงานได้เลย, ไม่ต้อง DNS	ต้องรัน script เอง, manual
+# หรือเปิดใน browser ก็ได้
 
 
 ⸻
 
-ถ้าบอกได้ว่า VM ใช้ OS อะไร (เช่น Ubuntu Server), แล้วคุณใช้ Mac เป็น host ผมสามารถเขียนไฟล์ config หรือ script ให้ได้เลยแบบเฉพาะเจาะจงครับ
+🧠 วิธีที่ 2: ใช้ DNS Server ภายใน (เช่น Pi-hole, dnsmasq)
+
+เหมาะถ้าคุณมีหลายเครื่องใน LAN แล้วไม่อยากไปแก้ hosts ทีละเครื่อง
+	•	ติดตั้ง DNS server เช่น dnsmasq บน Raspberry Pi หรือเครื่อง Linux
+	•	ตั้งค่าให้มันตอบ myapp.local → 192.168.1.100
+	•	ให้เครื่องใน LAN ใช้ DNS server นี้ผ่าน router
+
+⸻
+
+🔁 แล้ว NGINX เกี่ยวข้องยังไง?
+
+NGINX ทำหน้าที่ รับ request ตาม domain ที่มาชี้มายังเครื่อง แล้ว forward หรือเสิร์ฟหน้าเว็บ เช่น:
+
+🔧 ตัวอย่าง config NGINX
+
+```nginx
+server {
+    listen 80;
+    server_name myapp.local;
+
+    location / {
+        proxy_pass http://localhost:3000;  # หรือเสิร์ฟ static ก็ได้
+    }
+}
+```
+
+ตอนเปิด browser ไปที่ http://myapp.local → DNS ชี้มาที่เครื่อง NGINX → NGINX เสิร์ฟหน้าให้ตาม config
+
+⸻
+
+🛡 หมายเหตุ:
+	•	ชื่อ .local อาจ conflict กับ mDNS / Bonjour บน macOS, Linux (เช่น hostname.local)
+→ ถ้าเจอปัญหา ลองใช้ .test, .lan แทน เช่น myapp.test, api.local.lan
+
+⸻
+
+ถ้าต้องการ ผมสามารถช่วยเขียน config ให้เต็ม ๆ ทั้ง DNS + NGINX + Hosts ได้เลย ขอแค่บอกว่าใช้ระบบปฏิบัติการอะไรบ้างในเครือข่ายนะครับ.

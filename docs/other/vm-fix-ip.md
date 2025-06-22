@@ -57,12 +57,17 @@ sudo netplan apply
 อันนี้จะต้อง config ที่ /etc/network/interfaces แทน เช่น:
 
 ```ini
+# The loopback network interface
+auto lo
+iface lo inet loopback
+
+# The primary network interface
 auto enp0s1
 iface enp0s1 inet static
-  address 192.168.1.200
-  netmask 255.255.255.0
-  gateway 192.168.1.1
-  dns-nameservers 1.1.1.1 8.8.8.8
+    address 192.168.1.200
+    netmask 255.255.255.0
+    gateway 192.168.1.1
+    dns-nameservers 1.1.1.1 8.8.8.8
 ```
 
 แล้วสั่ง:

@@ -141,7 +141,10 @@ module.exports = {
             },
             {
                title: "📦 Other",
-               children: ["other/"],
+               children: [
+                  "other/",
+                  "other/vm-fix-ip.md",
+               ],
             },
          ],
       },

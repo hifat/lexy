@@ -1,0 +1,72 @@
+ปัญหาที่คุณเจอคือ IP ของ VM เปลี่ยนทุกครั้งที่รีสตาร์ทเครื่องจริง (host) ซึ่งทำให้ config ที่อ้างอิง IP พัง เช่น Jenkins URL, webhook, etc.
+การใช้ Domain name มาช่วยอ้างแทน IP เป็นทางออกที่ดีมาก แต่ต้อง จับคู่ domain → IP แบบ dynamic ให้ได้ด้วย
+
+⸻
+
+🔧 ทางออกที่ผมแนะนำมี 3 แนวทาง ขึ้นกับว่าอยากง่าย, ยืดหยุ่น หรือถาวร:
+
+⸻
+
+✅ วิธีที่ 1: Fix IP Address ของ VM (ดีที่สุดถ้าทำได้)
+
+ให้ VM ใช้ Static IP ภายใน network เช่น 192.168.1.200 แล้วใช้ hosts หรือ DNS local ชี้ domain → IP ถาวร
+
+วิธีทำ:
+	1.	เข้าไป config network ใน UTM VM → เปลี่ยนเป็น Bridged Mode
+	2.	ตั้งค่า IP ภายใน VM ให้เป็น static เช่นใน /etc/netplan/*.yaml (ถ้าใช้ Ubuntu)
+
+network:
+  version: 2
+  ethernets:
+    enp0s1:
+      dhcp4: no
+      addresses: [192.168.1.200/24]
+      gateway4: 192.168.1.1
+      nameservers:
+        addresses: [1.1.1.1, 8.8.8.8]
+
+	3.	จากนั้นคุณสามารถใช้ hosts หรือ DNS ภายในชี้ jenkins.local → 192.168.1.200
+
+⸻
+
+⚙️ วิธีที่ 2: ใช้ Dynamic DNS ภายใน Local
+
+ถ้าคุณใช้ IP แบบ DHCP แล้วไม่อยาก fix IP:
+
+🔁 ใช้ Script + dnsmasq + hostname
+	1.	ติดตั้ง dnsmasq บนเครื่องจริง หรือ VM ตัวใดก็ได้
+	2.	ให้ dnsmasq map domain เช่น jenkins.local → ไปยัง hostname ของ VM เช่น jenkins-vm
+	3.	ใช้ avahi-daemon / hostname -I ตรวจสอบ IP จริงแล้วอัพเดต DNS record auto
+
+หรือ
+
+🧠 ใช้ Script ตรวจ IP แล้วอัพเดตไฟล์ hosts อัตโนมัติ
+
+#!/bin/bash
+IP=$(ping -c 1 jenkins-vm.local | grep "PING" | awk '{print $3}' | tr -d '()')
+sudo sed -i "/jenkins.local/d" /etc/hosts
+echo "$IP jenkins.local" | sudo tee -a /etc/hosts
+
+แล้ว cron หรือ systemd timer สั่งรันทุกครั้งหลังเปิดเครื่อง
+
+⸻
+
+🔁 วิธีที่ 3: ใช้ host.docker.internal หรือ IP แบบ bridge (ถ้าใช้ Docker)
+
+ถ้า VM ใช้ Docker เป็นหลัก: Docker บน Mac รองรับ host.docker.internal เพื่อชี้กลับไปที่ host โดยไม่ต้องรู้ IP จริง
+
+แต่ถ้า VM แบบ UTM แยกเป็นเครื่องใหม่จริง ๆ (Bridge Mode) วิธีนี้ใช้ไม่ได้
+
+⸻
+
+🏁 สรุปสิ่งที่แนะนำ:
+
+ทางเลือก	ข้อดี	ข้อเสีย
+✅ Fix IP ของ VM	เสถียร, ไม่พัง, ง่ายสุด	ต้อง config network ใน VM
+🔁 ใช้ DNS ภายใน (dnsmasq)	ชื่อจำง่าย, update ได้	ต้องติดตั้ง DNS server
+🧠 Script update hosts	ทำงานได้เลย, ไม่ต้อง DNS	ต้องรัน script เอง, manual
+
+
+⸻
+
+ถ้าบอกได้ว่า VM ใช้ OS อะไร (เช่น Ubuntu Server), แล้วคุณใช้ Mac เป็น host ผมสามารถเขียนไฟล์ config หรือ script ให้ได้เลยแบบเฉพาะเจาะจงครับ

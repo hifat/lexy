@@ -31,6 +31,82 @@ ethernets:
 
 ⸻
 
+โดยรวม การตั้งค่า Static IP บน Debian กับ Ubuntu ใกล้เคียงกันมาก แต่มีความต่างนิดหน่อยขึ้นอยู่กับว่าใช้ระบบ network แบบไหน:
+
+⸻
+
+✅ กรณีที่คุณใช้ Ubuntu Server (20.04+), Debian 10+
+
+ส่วนใหญ่ใช้ระบบ Netplan เหมือนกัน
+-	✅ วิธี config แบบใช้ yaml (/etc/netplan/*.yaml) จะ เหมือนกัน 100% ระหว่าง Ubuntu กับ Debian
+-	ตัวอย่าง (ซ้ำเพื่อความชัดเจน):
+
+```yaml
+network:
+  version: 2
+  ethernets:
+    enp0s1:  # ชื่อ interface ตรวจได้จาก `ip a`
+      dhcp4: no
+      addresses: [192.168.1.200/24]
+      gateway4: 192.168.1.1
+      nameservers:
+        addresses: [1.1.1.1, 8.8.8.8]
+```
+
+สั่ง:
+
+```bash
+sudo netplan apply
+```
+
+
+⸻
+
+⚠️ แต่ถ้า Debian ของคุณยังใช้ ifupdown (interfaces file)
+
+อันนี้จะต้อง config ที่ /etc/network/interfaces แทน เช่น:
+
+```ini
+auto enp0s1
+iface enp0s1 inet static
+  address 192.168.1.200
+  netmask 255.255.255.0
+  gateway 192.168.1.1
+  dns-nameservers 1.1.1.1 8.8.8.8
+```
+
+แล้วสั่ง:
+
+```bash
+sudo systemctl restart networking
+```
+
+
+⸻
+
+🔍 วิธีเช็กว่าระบบคุณใช้ Netplan หรือไม่:
+
+```bash
+ls /etc/netplan
+```
+
+- ถ้ามีไฟล์ .yaml → ใช้ Netplan
+- ถ้าไม่มี → มักจะใช้ ifupdown (Debian แบบ minimal มักใช้แบบนี้)
+
+⸻
+
+✅ สรุป
+
+| OS           | Default Network System | Config Location              | หมายเหตุ                        |
+|--------------|-----------------------|------------------------------|----------------------------------|
+| Ubuntu       | Netplan               | /etc/netplan/*.yaml          | ใช้ได้กับ 18.04+                |
+| Debian 10+   | Netplan (บางกรณี)     | /etc/netplan/*.yaml          | บาง image ใช้ ifupdown แทน       |
+| Debian       | ifupdown (ดั้งเดิม)   | /etc/network/interfaces      | ต้องเขียนแบบ legacy เอง         |
+
+
+⸻
+
+
 ⚙️ วิธีที่ 2: ใช้ Dynamic DNS ภายใน Local
 
 ถ้าคุณใช้ IP แบบ DHCP แล้วไม่อยาก fix IP:

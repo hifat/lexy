@@ -17,6 +17,7 @@ module.exports = {
                   "docker/docker-compose.md",
                   "docker/kubernetes.md",
                   "docker/best-practices.md",
+                  "docker/did-you-know.md",
                ],
             },
             {

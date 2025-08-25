@@ -28,3 +28,13 @@ find . -name ".DS_Store" -delete
 ```bash
 ifconfig | grep "inet " | grep -v 127.0.0.1
 ```
+
+- Remove `node_modules`
+
+```bash
+# For checking
+find ./web -name "node_modules" -type d -prune
+
+# For delete
+find ./web -name "node_modules" -type d -prune -exec rm -rf '{}' +
+```

@@ -25,6 +25,12 @@ module.exports = {
                children: ["k8s/", "k8s/context.md"],
             },
             {
+               title: "🏟️ Colima",
+               children: [
+                  "colima/",
+               ],
+            },
+            {
                title: "📮 Type Script",
                children: ["typeScript/", "typeScript/JSDocs.md"],
             },

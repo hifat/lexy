@@ -1,3 +1,4 @@
 yarn.lock
 node_modules
-.vuepress
+.vuepress/dist
+.vuepress/.temp

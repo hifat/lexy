@@ -7,11 +7,22 @@
   "author": "Noei",
   "license": "MIT",
   "devDependencies": {
-    "vuepress": "^1.7.1"
+    "@vue/server-renderer": "3.5.45",
+    "@vuepress/bundler-vite": "2.0.0-rc.31",
+    "@vuepress/plugin-markdown-chart": "2.0.0-rc.137",
+    "@vuepress/plugin-markdown-math": "2.0.0-rc.137",
+    "@vuepress/plugin-markdown-tab": "2.0.0-rc.137",
+    "@vuepress/plugin-shiki": "2.0.0-rc.137",
+    "@vuepress/theme-default": "2.0.0-rc.137",
+    "katex": "^0.18.0",
+    "mermaid": "^12.3.0",
+    "sass-embedded": "^1.108.0",
+    "vue": "3.5.45",
+    "vuepress": "2.0.0-rc.31"
   },
   "scripts": {
     "dev": "vuepress dev docs",
     "build": "vuepress build docs"
   },
-  "dependencies": {}
+  "packageManager": "pnpm@11.22.0"
 }

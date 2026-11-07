@@ -1,0 +1,93 @@
+export const redirects = JSON.parse("{}")
+
+export const routes = Object.fromEntries([
+  ["/", { loader: () => import(/* webpackChunkName: "index.html" */"/Users/noei/Documents/web/vue/lexy/docs/README.md"), meta: {"title":"Lecy Welcom"} }],
+  ["/AI/", { loader: () => import(/* webpackChunkName: "AI_index.html" */"/Users/noei/Documents/web/vue/lexy/docs/AI/README.md"), meta: {"title":"AI"} }],
+  ["/HCI/", { loader: () => import(/* webpackChunkName: "HCI_index.html" */"/Users/noei/Documents/web/vue/lexy/docs/HCI/README.md"), meta: {"title":"HCI"} }],
+  ["/GPS/", { loader: () => import(/* webpackChunkName: "GPS_index.html" */"/Users/noei/Documents/web/vue/lexy/docs/GPS/README.md"), meta: {"title":""} }],
+  ["/Ubuntu/", { loader: () => import(/* webpackChunkName: "Ubuntu_index.html" */"/Users/noei/Documents/web/vue/lexy/docs/Ubuntu/README.md"), meta: {"title":"Ubuntu File"} }],
+  ["/colima/", { loader: () => import(/* webpackChunkName: "colima_index.html" */"/Users/noei/Documents/web/vue/lexy/docs/colima/README.md"), meta: {"title":"Colima"} }],
+  ["/WindowsCMD/", { loader: () => import(/* webpackChunkName: "WindowsCMD_index.html" */"/Users/noei/Documents/web/vue/lexy/docs/WindowsCMD/README.md"), meta: {"title":"Powershell"} }],
+  ["/ML/", { loader: () => import(/* webpackChunkName: "ML_index.html" */"/Users/noei/Documents/web/vue/lexy/docs/ML/README.md"), meta: {"title":"GAN"} }],
+  ["/ML/test.html", { loader: () => import(/* webpackChunkName: "ML_test.html" */"/Users/noei/Documents/web/vue/lexy/docs/ML/test.md"), meta: {"title":"Test"} }],
+  ["/docker/", { loader: () => import(/* webpackChunkName: "docker_index.html" */"/Users/noei/Documents/web/vue/lexy/docs/docker/README.md"), meta: {"title":"Basic"} }],
+  ["/docker/best-practices.html", { loader: () => import(/* webpackChunkName: "docker_best-practices.html" */"/Users/noei/Documents/web/vue/lexy/docs/docker/best-practices.md"), meta: {"title":"Best Practices"} }],
+  ["/docker/did-you-know.html", { loader: () => import(/* webpackChunkName: "docker_did-you-know.html" */"/Users/noei/Documents/web/vue/lexy/docs/docker/did-you-know.md"), meta: {"title":"Did You Know"} }],
+  ["/docker/docker-compose.html", { loader: () => import(/* webpackChunkName: "docker_docker-compose.html" */"/Users/noei/Documents/web/vue/lexy/docs/docker/docker-compose.md"), meta: {"title":"Docker Compose"} }],
+  ["/docker/docker-file.html", { loader: () => import(/* webpackChunkName: "docker_docker-file.html" */"/Users/noei/Documents/web/vue/lexy/docs/docker/docker-file.md"), meta: {"title":"Basic Syntax"} }],
+  ["/docker/integrate.html", { loader: () => import(/* webpackChunkName: "docker_integrate.html" */"/Users/noei/Documents/web/vue/lexy/docs/docker/integrate.md"), meta: {"title":"Integratetion"} }],
+  ["/docker/kubernetes.html", { loader: () => import(/* webpackChunkName: "docker_kubernetes.html" */"/Users/noei/Documents/web/vue/lexy/docs/docker/kubernetes.md"), meta: {"title":"Kubernetes"} }],
+  ["/git/", { loader: () => import(/* webpackChunkName: "git_index.html" */"/Users/noei/Documents/web/vue/lexy/docs/git/README.md"), meta: {"title":"คำสั่งที่ใช้บ่อย ๆ"} }],
+  ["/git/ssh-key.html", { loader: () => import(/* webpackChunkName: "git_ssh-key.html" */"/Users/noei/Documents/web/vue/lexy/docs/git/ssh-key.md"), meta: {"title":"SSH Key"} }],
+  ["/financial/money101.html", { loader: () => import(/* webpackChunkName: "financial_money101.html" */"/Users/noei/Documents/web/vue/lexy/docs/financial/money101.md"), meta: {"title":"Money101"} }],
+  ["/golang/", { loader: () => import(/* webpackChunkName: "golang_index.html" */"/Users/noei/Documents/web/vue/lexy/docs/golang/README.md"), meta: {"title":"Tech School"} }],
+  ["/golang/go-swagger.html", { loader: () => import(/* webpackChunkName: "golang_go-swagger.html" */"/Users/noei/Documents/web/vue/lexy/docs/golang/go-swagger.md"), meta: {"title":"Go Swagger"} }],
+  ["/iTerm2/", { loader: () => import(/* webpackChunkName: "iTerm2_index.html" */"/Users/noei/Documents/web/vue/lexy/docs/iTerm2/README.md"), meta: {"title":"iTerm2"} }],
+  ["/iTerm2/issue-report.html", { loader: () => import(/* webpackChunkName: "iTerm2_issue-report.html" */"/Users/noei/Documents/web/vue/lexy/docs/iTerm2/issue-report.md"), meta: {"title":""} }],
+  ["/elasticsearch/", { loader: () => import(/* webpackChunkName: "elasticsearch_index.html" */"/Users/noei/Documents/web/vue/lexy/docs/elasticsearch/README.md"), meta: {"title":"Elasticsearch"} }],
+  ["/elasticsearch/search-and-query.html", { loader: () => import(/* webpackChunkName: "elasticsearch_search-and-query.html" */"/Users/noei/Documents/web/vue/lexy/docs/elasticsearch/search-and-query.md"), meta: {"title":"Search & Query"} }],
+  ["/duolingo/", { loader: () => import(/* webpackChunkName: "duolingo_index.html" */"/Users/noei/Documents/web/vue/lexy/docs/duolingo/README.md"), meta: {"title":"Duolingo Leaning"} }],
+  ["/duolingo/adjective.html", { loader: () => import(/* webpackChunkName: "duolingo_adjective.html" */"/Users/noei/Documents/web/vue/lexy/docs/duolingo/adjective.md"), meta: {"title":"Adjective"} }],
+  ["/duolingo/adjective_3.html", { loader: () => import(/* webpackChunkName: "duolingo_adjective_3.html" */"/Users/noei/Documents/web/vue/lexy/docs/duolingo/adjective_3.md"), meta: {"title":"Adjective 3"} }],
+  ["/duolingo/determiners.html", { loader: () => import(/* webpackChunkName: "duolingo_determiners.html" */"/Users/noei/Documents/web/vue/lexy/docs/duolingo/determiners.md"), meta: {"title":"Determiners"} }],
+  ["/duolingo/education.html", { loader: () => import(/* webpackChunkName: "duolingo_education.html" */"/Users/noei/Documents/web/vue/lexy/docs/duolingo/education.md"), meta: {"title":"Education"} }],
+  ["/duolingo/infinitive.html", { loader: () => import(/* webpackChunkName: "duolingo_infinitive.html" */"/Users/noei/Documents/web/vue/lexy/docs/duolingo/infinitive.md"), meta: {"title":"Infinitive"} }],
+  ["/duolingo/people.html", { loader: () => import(/* webpackChunkName: "duolingo_people.html" */"/Users/noei/Documents/web/vue/lexy/docs/duolingo/people.md"), meta: {"title":"People"} }],
+  ["/duolingo/place.html", { loader: () => import(/* webpackChunkName: "duolingo_place.html" */"/Users/noei/Documents/web/vue/lexy/docs/duolingo/place.md"), meta: {"title":"Place"} }],
+  ["/duolingo/practice.html", { loader: () => import(/* webpackChunkName: "duolingo_practice.html" */"/Users/noei/Documents/web/vue/lexy/docs/duolingo/practice.md"), meta: {"title":"Practice"} }],
+  ["/duolingo/verb.html", { loader: () => import(/* webpackChunkName: "duolingo_verb.html" */"/Users/noei/Documents/web/vue/lexy/docs/duolingo/verb.md"), meta: {"title":"Verb 1"} }],
+  ["/issueReport/nodejs.html", { loader: () => import(/* webpackChunkName: "issueReport_nodejs.html" */"/Users/noei/Documents/web/vue/lexy/docs/issueReport/nodejs.md"), meta: {"title":"NodeJS"} }],
+  ["/infra/jenkins.html", { loader: () => import(/* webpackChunkName: "infra_jenkins.html" */"/Users/noei/Documents/web/vue/lexy/docs/infra/jenkins.md"), meta: {"title":"Jenkins"} }],
+  ["/k8s/", { loader: () => import(/* webpackChunkName: "k8s_index.html" */"/Users/noei/Documents/web/vue/lexy/docs/k8s/README.md"), meta: {"title":"K8s"} }],
+  ["/k8s/context.html", { loader: () => import(/* webpackChunkName: "k8s_context.html" */"/Users/noei/Documents/web/vue/lexy/docs/k8s/context.md"), meta: {"title":""} }],
+  ["/logicPro/", { loader: () => import(/* webpackChunkName: "logicPro_index.html" */"/Users/noei/Documents/web/vue/lexy/docs/logicPro/README.md"), meta: {"title":""} }],
+  ["/logicPro/plugin-instrument.html", { loader: () => import(/* webpackChunkName: "logicPro_plugin-instrument.html" */"/Users/noei/Documents/web/vue/lexy/docs/logicPro/plugin-instrument.md"), meta: {"title":"Instrument"} }],
+  ["/macCMD/", { loader: () => import(/* webpackChunkName: "macCMD_index.html" */"/Users/noei/Documents/web/vue/lexy/docs/macCMD/README.md"), meta: {"title":"sh"} }],
+  ["/macCMD/private.html", { loader: () => import(/* webpackChunkName: "macCMD_private.html" */"/Users/noei/Documents/web/vue/lexy/docs/macCMD/private.md"), meta: {"title":""} }],
+  ["/llm-learning/lesson-1.html", { loader: () => import(/* webpackChunkName: "llm-learning_lesson-1.html" */"/Users/noei/Documents/web/vue/lexy/docs/llm-learning/lesson-1.md"), meta: {"title":"Build an LLM from Scratch — Lesson 01"} }],
+  ["/n8n/", { loader: () => import(/* webpackChunkName: "n8n_index.html" */"/Users/noei/Documents/web/vue/lexy/docs/n8n/README.md"), meta: {"title":"สร้างเครื่องผลิตคลิปสั้นไวรัล"} }],
+  ["/nginx/", { loader: () => import(/* webpackChunkName: "nginx_index.html" */"/Users/noei/Documents/web/vue/lexy/docs/nginx/README.md"), meta: {"title":"NGINX"} }],
+  ["/nestjs/", { loader: () => import(/* webpackChunkName: "nestjs_index.html" */"/Users/noei/Documents/web/vue/lexy/docs/nestjs/README.md"), meta: {"title":"NestJS"} }],
+  ["/other/", { loader: () => import(/* webpackChunkName: "other_index.html" */"/Users/noei/Documents/web/vue/lexy/docs/other/README.md"), meta: {"title":"Other"} }],
+  ["/other/vm-fix-ip.html", { loader: () => import(/* webpackChunkName: "other_vm-fix-ip.html" */"/Users/noei/Documents/web/vue/lexy/docs/other/vm-fix-ip.md"), meta: {"title":"Fix VM IP"} }],
+  ["/oracle/", { loader: () => import(/* webpackChunkName: "oracle_index.html" */"/Users/noei/Documents/web/vue/lexy/docs/oracle/README.md"), meta: {"title":"ORACLE DB"} }],
+  ["/redis/", { loader: () => import(/* webpackChunkName: "redis_index.html" */"/Users/noei/Documents/web/vue/lexy/docs/redis/README.md"), meta: {"title":"Redis"} }],
+  ["/redis/grafana.html", { loader: () => import(/* webpackChunkName: "redis_grafana.html" */"/Users/noei/Documents/web/vue/lexy/docs/redis/grafana.md"), meta: {"title":"Grafana"} }],
+  ["/redis/influxdb.html", { loader: () => import(/* webpackChunkName: "redis_influxdb.html" */"/Users/noei/Documents/web/vue/lexy/docs/redis/influxdb.md"), meta: {"title":"Influx DB"} }],
+  ["/redis/k6.html", { loader: () => import(/* webpackChunkName: "redis_k6.html" */"/Users/noei/Documents/web/vue/lexy/docs/redis/k6.md"), meta: {"title":"K6"} }],
+  ["/typeScript/JSDocs.html", { loader: () => import(/* webpackChunkName: "typeScript_JSDocs.html" */"/Users/noei/Documents/web/vue/lexy/docs/typeScript/JSDocs.md"), meta: {"title":"Strategies for adopting TypeScript into a large project"} }],
+  ["/typeScript/", { loader: () => import(/* webpackChunkName: "typeScript_index.html" */"/Users/noei/Documents/web/vue/lexy/docs/typeScript/README.md"), meta: {"title":"Type Script"} }],
+  ["/security/OWASP.html", { loader: () => import(/* webpackChunkName: "security_OWASP.html" */"/Users/noei/Documents/web/vue/lexy/docs/security/OWASP.md"), meta: {"title":"OWASP"} }],
+  ["/security/binary-secure.html", { loader: () => import(/* webpackChunkName: "security_binary-secure.html" */"/Users/noei/Documents/web/vue/lexy/docs/security/binary-secure.md"), meta: {"title":""} }],
+  ["/rust/", { loader: () => import(/* webpackChunkName: "rust_index.html" */"/Users/noei/Documents/web/vue/lexy/docs/rust/README.md"), meta: {"title":"Memory Debugger"} }],
+  ["/roblox/", { loader: () => import(/* webpackChunkName: "roblox_index.html" */"/Users/noei/Documents/web/vue/lexy/docs/roblox/README.md"), meta: {"title":"Trick"} }],
+  ["/roblox/screen-ui.html", { loader: () => import(/* webpackChunkName: "roblox_screen-ui.html" */"/Users/noei/Documents/web/vue/lexy/docs/roblox/screen-ui.md"), meta: {"title":"Screen UI"} }],
+  ["/unitTest/", { loader: () => import(/* webpackChunkName: "unitTest_index.html" */"/Users/noei/Documents/web/vue/lexy/docs/unitTest/README.md"), meta: {"title":"Unit Test"} }],
+  ["/youtube/cyber-security-bookmark.html", { loader: () => import(/* webpackChunkName: "youtube_cyber-security-bookmark.html" */"/Users/noei/Documents/web/vue/lexy/docs/youtube/cyber-security-bookmark.md"), meta: {"title":"Cyber Security"} }],
+  ["/youtube/go-garble.html", { loader: () => import(/* webpackChunkName: "youtube_go-garble.html" */"/Users/noei/Documents/web/vue/lexy/docs/youtube/go-garble.md"), meta: {"title":"Go Garble"} }],
+  ["/youtube/mongo-db-principle.html", { loader: () => import(/* webpackChunkName: "youtube_mongo-db-principle.html" */"/Users/noei/Documents/web/vue/lexy/docs/youtube/mongo-db-principle.md"), meta: {"title":"MongoDB Principle"} }],
+  ["/AI/BotTrade/", { loader: () => import(/* webpackChunkName: "AI_BotTrade_index.html" */"/Users/noei/Documents/web/vue/lexy/docs/AI/BotTrade/README.md"), meta: {"title":"Bot Trade"} }],
+  ["/AI/LLM%20Gag/htb-ep1.html", { loader: () => import(/* webpackChunkName: "AI_LLM Gag_htb-ep1.html" */"/Users/noei/Documents/web/vue/lexy/docs/AI/LLM Gag/htb-ep1.md"), meta: {"title":""} }],
+  ["/AI/LLM%20Gag/htb-ep2.html", { loader: () => import(/* webpackChunkName: "AI_LLM Gag_htb-ep2.html" */"/Users/noei/Documents/web/vue/lexy/docs/AI/LLM Gag/htb-ep2.md"), meta: {"title":"Decoded Thai Message"} }],
+  ["/AI/LLM%20Gag/htp-ep3.html", { loader: () => import(/* webpackChunkName: "AI_LLM Gag_htp-ep3.html" */"/Users/noei/Documents/web/vue/lexy/docs/AI/LLM Gag/htp-ep3.md"), meta: {"title":"Decoded Thai Message #2"} }],
+  ["/AI/LLM%20Gag/real-world-ep1.html", { loader: () => import(/* webpackChunkName: "AI_LLM Gag_real-world-ep1.html" */"/Users/noei/Documents/web/vue/lexy/docs/AI/LLM Gag/real-world-ep1.md"), meta: {"title":""} }],
+  ["/AI/LLM%20Gag/real-world-ep2.html", { loader: () => import(/* webpackChunkName: "AI_LLM Gag_real-world-ep2.html" */"/Users/noei/Documents/web/vue/lexy/docs/AI/LLM Gag/real-world-ep2.md"), meta: {"title":"Decoded Thai Text from SSE Stream"} }],
+  ["/AI/LLM%20Gag/real-world-ep3.html", { loader: () => import(/* webpackChunkName: "AI_LLM Gag_real-world-ep3.html" */"/Users/noei/Documents/web/vue/lexy/docs/AI/LLM Gag/real-world-ep3.md"), meta: {"title":""} }],
+  ["/AI/LLM%20Gag/real-world-ep4.html", { loader: () => import(/* webpackChunkName: "AI_LLM Gag_real-world-ep4.html" */"/Users/noei/Documents/web/vue/lexy/docs/AI/LLM Gag/real-world-ep4.md"), meta: {"title":"Decoded Message Content"} }],
+  ["/AI/LLM%20Gag/real-world-ep5.html", { loader: () => import(/* webpackChunkName: "AI_LLM Gag_real-world-ep5.html" */"/Users/noei/Documents/web/vue/lexy/docs/AI/LLM Gag/real-world-ep5.md"), meta: {"title":"🔥 Full Active Directory Pentest Script (เบื้องต้น) 🔥"} }],
+  ["/AI/LLM%20Gag/real-world-ep6.html", { loader: () => import(/* webpackChunkName: "AI_LLM Gag_real-world-ep6.html" */"/Users/noei/Documents/web/vue/lexy/docs/AI/LLM Gag/real-world-ep6.md"), meta: {"title":"⚡ Advanced Active Directory Pentest Script ⚡"} }],
+  ["/404.html", { loader: () => import(/* webpackChunkName: "404.html" */"/Users/noei/Documents/web/vue/lexy/docs/.vuepress/.temp/pages/404.html.vue"), meta: {"title":""} }],
+]);
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  __VUE_HMR_RUNTIME__.updateRoutes?.(routes)
+  __VUE_HMR_RUNTIME__.updateRedirects?.(redirects)
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept((m) => {
+    __VUE_HMR_RUNTIME__.updateRoutes?.(m.routes)
+    __VUE_HMR_RUNTIME__.updateRedirects?.(m.redirects)
+  })
+}

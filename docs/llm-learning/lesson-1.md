@@ -94,7 +94,7 @@ Bigram หมายถึงการเรียนรู้ความสั�
 
 เปิด Terminal บน Mac mini แล้วสร้างไฟล์:
 
-```
+```bash
 touch lesson01.py
 ```
 
@@ -102,13 +102,61 @@ touch lesson01.py
 
 ขั้นตอนที่ 2: เขียนโค้ด
 
-```
-from collections import defaultdict, Counter# ข้อมูลสำหรับฝึกโมเดลtraining_text = "ababac"# เก็บจำนวนครั้งของตัวอักษรที่ตามกันmodel = defaultdict(Counter)for current_token, next_token in zip(    training_text,    training_text[1:]):    model[current_token][next_token] += 1# คำนวณความน่าจะเป็นของตัวอักษรถัดไปdef predict_next_token(current_token):    counts = model.get(current_token)    if not counts:        return {}    total = sum(counts.values())    probabilities = {}    for next_token, count in counts.items():        probabilities[next_token] = count / total    return probabilities# ทดลองทำนายหลังตัวอักษร acurrent_token = "a"results = predict_next_token(current_token)print(f"ตัวอักษรถัดไปหลัง {current_token!r}:")for next_token, probability in results.items():    print(f"{next_token!r}: {probability:.1%}")
+```python
+from collections import defaultdict, Counter
+
+# ข้อมูลสำหรับฝึกโมเดล
+from collections import defaultdict, Counter
+
+# 1. ข้อมูลสำหรับฝึกโมเดล
+training_text = "ababac"
+
+# 2. สร้างพื้นที่เก็บความสัมพันธ์ระหว่างตัวอักษร
+model = defaultdict(Counter)
+
+# 3. จับคู่ตัวอักษรปัจจุบันกับตัวถัดไป
+pairs = zip(training_text, training_text[1:])
+
+for current_token, next_token in pairs:
+    model[current_token][next_token] += 1
+
+# 4. ทำนายตัวอักษรถัดไป
+def predict_next_token(current_token):
+    counts = model.get(current_token)
+
+    if not counts:
+        return {}
+
+    total = sum(counts.values())
+
+    probabilities = {}
+
+    for next_token, count in counts.items():
+        probabilities[next_token] = count / total
+
+    return probabilities
+
+# 5. แสดงข้อมูลที่โมเดลเรียนรู้
+print("Learned model:")
+
+for current_token, counts in model.items():
+    print(f"\nAfter {current_token!r}:")
+
+    for next_token, count in counts.items():
+        print(f"  {next_token!r}: {count} times")
+
+# 6. ทดลองทำนาย
+print("\nPrediction after 'a':")
+
+results = predict_next_token("a")
+
+for next_token, probability in results.items():
+    print(f"  {next_token!r}: {probability:.1%}")
 ```
 
 ขั้นตอนที่ 3: รันโปรแกรม
 
-```
+```bash
 python3 lesson01.py
 ```
 
@@ -137,13 +185,13 @@ python3 lesson01.py
 
 ตอนนี้ลองเปลี่ยนข้อมูลฝึกจาก:
 
-```
+```python
 training_text = "ababac"
 ```
 
 เป็น:
 
-```
+```python
 training_text = "abababac"
 ```
 
@@ -178,27 +226,27 @@ Bigram จะเรียนรู้ความสัมพันธ์ระ�
 
 ข้อ 1. Language Model มีหน้าที่หลักอะไร?
 
-จัดเรียงไฟล์
+a. จัดเรียงไฟล์
 
-คาดการณ์ Token ถัดไป
+b. คาดการณ์ Token ถัดไป
 
-แปลง Python เป็น Machine Code
+c. แปลง Python เป็น Machine Code
 
 ข้อ 2. ถ้าพบ b จำนวน 8 ครั้ง และ c จำนวน 2 ครั้ง หลัง a โอกาสของ b คือเท่าไร?
 
-20%
+a. 20%
 
-50%
+b. 50%
 
-80%
+c. 80%
 
 ข้อ 3. ข้อจำกัดสำคัญของ Bigram คืออะไร?
 
-ดูความสัมพันธ์ได้เฉพาะ Token ที่อยู่ติดกัน
+a. ดูความสัมพันธ์ได้เฉพาะ Token ที่อยู่ติดกัน
 
-ไม่สามารถนับจำนวนได้
+b. ไม่สามารถนับจำนวนได้
 
-ต้องใช้ GPU เท่านั้น
+c. ต้องใช้ GPU เท่านั้น
 
 ตรวจคำตอบ
 
